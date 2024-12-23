@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숨김메뉴예제</title>
+    <style>
+        *{margin: 0; padding: 0;}
+
+        #btn {
+            display: none;
+        }
+
+        #wrap {
+            width: 400px;
+            height: 500px;
+            border: 10px solid black;
+            margin: 0 auto;
+        }
+
+        label {
+            width: 50px;
+            height: 50px;
+            background-color: antiquewhite;
+            display: block;
+            font: 900 25px/50px '';
+            text-align: center;
+        }
+
+        #move_box {
+            width: 100%;
+            background-color: azure;
+            height: 0;
+            overflow: hidden;
+            transition-duration: 1s;
+
+            /* position: relative;
+            top: -400px; */
+
+            /* display: none; */
+            /* =>display:none/block과 transition은 함께 사용할 수 없음
+            (부드러운 움직임 적용되지 않음) */
+
+            /* *opacity(투명도)
+            =>0 ~ 0.5 ~ 1으로 수치값 조절 가능
+            =>투명해졌을뿐 브라우저에는 크기값이 존재하는 상태
+            display: none과는 다름 */
+        }
+
+        #btn:checked~#move_box {
+            height: 400px;
+            /* display: block; */
+        }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+
+        <input type="checkbox" id="btn" />
+        <label for="btn">=</label>
+
+        <div id="move_box">
+            <h1>위에서 움직임</h1>
+        </div>
+
+    </div>
+</body>
+</html>

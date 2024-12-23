@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1일차 예제풀이</title>
+
+    <style>
+
+        *{margin: 0; padding: 0;}
+        ul {list-style: none;}
+        a {text-decoration: none; color: black; display: block;}
+
+        #wrap {
+            width: 100%;
+            text-align: center;
+        }
+
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: blanchedalmond;
+            float: left;
+        }
+
+        #in-header {
+            width: 1200px;
+            height: 100%;
+            background-color: burlywood;
+            margin: 0 auto;
+        }
+
+        #logo {
+            width: 200px;
+            height: 100%;
+            background-color: cadetblue;
+            float: left;
+            /* font-size: 22px;
+            font-weight: 900;
+            line-height: 100px; */
+           /*  **font 축약형
+            font: 두께 크기/line-height '글씨체'; 
+            =>실무에서는 잘 사용하지 않음*/
+            font: 900 22px/100px '';
+        }
+
+        #menu-wrap {
+            width: 800px;
+            height: 100%;
+            background-color: chocolate;
+            float: left;
+        }
+
+        #menu-wrap>li {
+            width: 20%;
+            height: 100%;
+            float: left;
+            font: 18px/100px '';
+        }
+
+        /* header end  */
+
+        #section-1 {
+            width: 100%;
+            height: 400px;
+            background-color: cornflowerblue;
+            float: left;
+        }
+        /* section-1 end  */
+
+        #section-2 {
+            width: 100%;
+            background-color: crimson;
+            float: left;
+            padding: 50px 0;
+        }
+
+        .container {
+            width: 1200px;
+            height: 100%;
+            background-color: aliceblue;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .circle {
+            width: 262.5px;
+            height: 262.5px;
+            border: 1px solid gray;
+            box-sizing: border-box;
+            float: left;
+            margin-right: 50px;
+            border-radius: 50%;
+        }
+
+        .circle:last-child {
+            margin-right: 0;
+        }
+
+        /* section-2 end  */
+
+        #section-3 {
+            width: 100%;
+            height: 1700px;
+            background-color: burlywood;
+            float: left;
+        }
+
+        .con-wrap {
+            width: 386.666px;
+            height: 100%;
+            background-color: cadetblue;
+            float: left;
+            margin-right: 20px;
+        }
+
+        .con-wrap:last-child {
+            margin-right: 0;
+        }
+
+        .s-con {
+            width: 100%;
+            height: 500px;
+            background-color: rgb(161, 185, 136);
+        }
+
+        .l-con {
+            width: 100%;
+            height: 600px;
+            background-color: rgb(186, 245, 128);
+        }
+
+        .m-con {
+            margin: 50px 0;
+        }
+
+        /* section-2 end  */
+
+        #top-btn {
+            width: 50px;
+            height: 50px;
+            background-color: coral;
+            position: fixed;
+            bottom: 100px;
+            right: 100px;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        /* top-btn end  */
+
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+
+        <header>
+            <div id="in-header">
+                <div id="logo"><a href="#">로고</a> </div>
+                <ul id="menu-wrap">
+                    <li><a href="#">메뉴1</a></li>
+                    <li><a href="#">메뉴2</a></li>
+                    <li><a href="#">메뉴3</a></li>
+                    <li><a href="#">메뉴4</a></li>
+                    <li><a href="#">메뉴5</a></li>
+                </ul>
+            </div>
+        </header>
+        <!-- header end  -->
+
+        <section id="section-1"></section>
+        <!-- section end  -->
+
+        <section id="section-2">
+            <div class="container">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+        </section>
+        <!-- section end  -->
+
+        <section id="section-3">
+            <div class="container">
+                <ul class="con-wrap">
+                    <li class="s-con"></li>
+                    <li class="l-con m-con"></li>
+                   <!--  =>클래스명은 태그에게 하나 이상 계속 추가 가능
+                    =>추가방법
+                    class="클래스명1 클래스명2 클래스명3"
+                    (띄어쓰기로 클래스명 구분 시켜줌) -->
+                    <li class="s-con"></li> 
+                </ul>
+                <ul class="con-wrap">
+                    <li class="s-con"></li>
+                    <li class="s-con m-con"></li>
+                    <li class="l-con"></li> 
+                </ul>
+                <ul class="con-wrap">
+                    <li class="s-con"></li>
+                    <li class="l-con m-con"></li>
+                    <li class="s-con"></li> 
+                </ul>
+            </div>
+        </section>
+        <!-- section end  -->
+
+        <div id="top-btn">
+            <a href="#">top</a>
+        </div>
+        <!-- top-btn end  -->
+    </div>
+    
+</body>
+</html>

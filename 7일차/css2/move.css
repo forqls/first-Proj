@@ -1,0 +1,33 @@
+*{margin: 0; padding: 0;}
+
+#out_box {
+    width: 400px;
+    height: 600px;
+    border: 10px solid black;
+    position: relative;
+    overflow: hidden;
+}
+
+.in_box {
+    width: 100%;
+    height: 100%;
+    font: 900 50px/600px '';
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#left_box {
+    background-color: darksalmon;
+}
+
+#right_box {
+    background-color: tomato;
+    left: 400px;
+    transition-duration: 1s;
+}
+
+#out_box:hover>#right_box {
+    left: 0;
+}

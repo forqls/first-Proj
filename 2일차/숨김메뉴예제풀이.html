@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숨김메뉴예제풀이</title>
+
+    <style>
+        *{margin: 0; padding: 0;}
+        
+        input {
+            display: none;
+        }
+
+        #wrap {
+            width: 500px;
+            height: 600px;
+            border: 10px solid black;
+            margin: 0 auto;
+        }
+
+        label {
+            width: 50px;
+            height: 50px;
+            background-color: burlywood;
+            display: block;
+            text-align: center;
+            font: 900 24px/50px '';
+        }
+
+        #move-box {
+            width: 100%;
+            
+            background-color: burlywood;
+
+            /* position: relative;
+            top: -500px;
+            transition-duration: 1s; */
+
+            /* display: none; */
+            /* transition-duration: 1s; */
+           /*  =>display: none/block;과 transition값은 함께 사용할 수 없음 
+            =>부드러운 움직임이 들어가지 않기 때문 */
+
+            /* opacity: 0; */
+            /* =>투명도 opacity
+            =>0(투명)~0.5(반투명)~1.0(불투명)으로 수치조절 가능
+            (단위는 없음) */
+            /* transition: 1s; */
+
+            /* height: 400px; */
+            /* transition-duration: 1s;
+            =>크기값이 주석처리되어있는 상태에서(아예속성을 없애버리면)
+            transition값은 적용되지 않음 */
+
+            height: 0;
+            overflow: hidden; 
+            /* ->부모높이이상 커지지 않게 해주세요 */
+            transition-duration: 1s;
+            
+        }
+
+        #menu:checked~#move-box {
+            /* top: 0; */
+
+            /* display: block; */
+
+            /* opacity: 1; */
+
+            height: 400px;
+            
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+
+        <input type="checkbox" id="menu" />
+        <label for="menu">=</label>
+
+        <div id="move-box">
+            <h1>위에서 내려옴</h1>
+        </div>
+
+    </div>
+</body>
+</html>

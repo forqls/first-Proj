@@ -1,0 +1,150 @@
+@media all and (max-width:759px) {
+
+    header, section, {
+        width: 100%;
+        float: left;
+        position: relative;
+    }
+    
+    #in-header, .container {
+        width: 95%; /* 1200px */
+        height: 100%;
+        background-color: lightsalmon;
+        margin: 0 auto;
+    }
+    /* 공통영역 end  */
+    
+    #wrap {
+        width: 100%;
+    }
+    
+    header {
+        height: 100px;
+        background-color: salmon;
+        text-align: center;
+        font: 900 22px/100px '';
+        z-index: 99;
+        padding: 10px 0;
+    }
+    
+    #logo {
+        width: 200px;/* 200px */
+        height: 100px;
+        background-color: rgb(253, 253, 115);
+        margin: 0 auto;
+    }
+
+    #menu-wrap, #sub-menu, #mo-btn {
+        display: none;
+    }
+    /* =>#mo-btn 체크박스 없앰 */
+
+    label {
+        width: 50px;
+        height: 50px;
+        background-color: lightyellow;
+        color: salmon;
+        display: block;
+        /* ->인라인요소라서 크기값 안들어가기 때문  */
+        font: 900 22px/50px '';
+        position: absolute;
+        top: 25px;
+        right: 20px;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    #mo-menu {
+        width: 95%;
+        height: 0;
+        overflow: hidden;
+        margin: 0 auto;
+        transition-duration: 0.5s;
+        background-color:tomato;
+    }
+
+    #mo-menu>li {
+        width: 100%;
+        height: 25%;
+        border-bottom: 1px solid rgb(252, 252, 154);
+        box-sizing: border-box;
+        line-height: 50px;
+        text-align: center;
+    }
+
+    #mo-btn:checked~#mo-menu {
+        height: 250px;
+    }
+
+    
+    #menu-wrap {
+       display: none;
+    }
+    
+    /* header end  */
+    
+    #section-1 {
+        height: 600px;
+        background-image: url(../img/a.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    /* section-1 end */
+    
+    .container {
+        overflow: hidden;
+    }
+    
+    #section-2 {
+        background-color: rgb(250, 167, 158);
+        margin: 100px auto;
+    }
+    
+    .con-2 {
+        width: 100%;
+        background-color: thistle;
+        float: left;
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+
+    
+    
+    .con-2>img {
+        width: 100%;
+    }
+    
+    
+    /* section-2 end */
+    
+    #section-3 {
+        height: 300px;
+        background-color:rgb(250, 167, 158);
+    }
+    
+    #section-4 {
+        background-color: rgb(255, 163, 255);
+        padding: 100px 0;
+    }
+    
+    .con-4 {
+        width: 100%;
+        height: 300px;
+        background-color: salmon;
+        margin-bottom: 10px;
+    }
+    
+    .con-4:last-child {
+        margin-right: 0;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    }/* end */

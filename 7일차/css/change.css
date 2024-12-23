@@ -1,0 +1,38 @@
+*{margin: 0; padding: 0;}
+
+#out-box {
+    width: 400px;
+    height: 600px;
+    border: 10px solid black;
+    position: relative;
+    /* =>1)부모를 기준으로 겹쳐지게 만들기 */
+    overflow: hidden;
+}
+
+.in-box {
+    width: 100%;
+    height: 100%;
+    font: 50px/600px '';
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* =>부모를 기준으로 겹쳐지게 만들기 */
+}
+
+#left {
+    background-color: lavender;
+}
+
+#right {
+    background-color: lemonchiffon;
+    left: 400px;
+    /* =>2)부모바깥쪽으로 보내주기  */
+    transition-duration: 1s;
+}
+
+#out-box:hover #right {
+    left: 0;
+    /* =>부모에게 마우스를 올렸을떄 오른쪽 영역이 원래위치로 
+    돌아오게 해주세용 */
+}

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+/*kboard set********************************************************************STR*/
+
+
+/*우상단 리스트박스*/
+
+#kboard-default-list .kboard-list-header .kboard-sort select,
+#kboard-thumbnail-list .kboard-list-header .kboard-sort select {
+    -webkit-appearance: menulist !important;
+    background-color: #fafafa !important;
+}
+
+
+/*table head(상단 타이틀 tr)*/
+
+#kboard-default-list table {
+    background: transparent !important;
+}
+
+#kboard-default-list thead {
+    background: #f4f4f4 !important;
+    border: 1px solid #eaeaea !important;
+}
+
+#kboard-default-document .kboard-detail {
+    border-left: 1px solid #eaeaea;
+    border-right: 1px solid #eaeaea;
+}
+
+#kboard-default-list .kboard-list thead tr td {
+    border-bottom: 1px solid #ddd !important;
+}
+
+
+/*kboard문구 삭제*/
+
+.kboard-default-poweredby,
+.kboard-thumbnail-poweredby {
+    display: none !important;
+}
+
+
+/*버튼색상*/
+
+a.kboard-default-button-small,
+a.kboard-thumbnail-button-small,
+input.kboard-default-button-small,
+input.kboard-thumbnail-button-small,
+button.kboard-default-button-small,
+button.kboard-thumbnail-button-small,
+#kboard-default-list .kboard-pagination .kboard-pagination-pages li:hover a,
+#kboard-default-list .kboard-pagination .kboard-pagination-pages li.active a,
+#kboard-thumbnail-list .kboard-pagination .kboard-pagination-pages li:hover a,
+#kboard-thumbnail-list .kboard-pagination .kboard-pagination-pages li.active a {
+    background: black !important;
+}
+
+#kboard-default-list .kboard-list table td.kboard-list-vote,
+#kboard-default-list .kboard-list table td.kboard-list-view,
+#kboard-default-list .kboard-list .kboard-mobile-contents .contents-separator.kboard-vote,
+#kboard-default-list .kboard-list .kboard-mobile-contents .contents-separator.kboard-view,
+#kboard-default-list .kboard-list .kboard-mobile-contents .contents-item.kboard-vote,
+#kboard-default-list .kboard-list .kboard-mobile-contents .contents-item.kboard-view {
+    display: none;
+}
+
+#kboard-thumbnail-list .kboard-list table td.kboard-list-vote,
+#kboard-thumbnail-list .kboard-list table td.kboard-list-view,
+#kboard-thumbnail-list .kboard-list .kboard-mobile-contents .contents-separator.kboard-vote,
+#kboard-thumbnail-list .kboard-list .kboard-mobile-contents .contents-separator.kboard-view,
+#kboard-thumbnail-list .kboard-list .kboard-mobile-contents .contents-item.kboard-vote,
+#kboard-thumbnail-list .kboard-list .kboard-mobile-contents .contents-item.kboard-view {
+    display: none;
+}
+
+.kboard-pagination {
+    display: none;
+}
+
+
+/*뉴스게시판 타이틀*/
+
+.kboard-thumbnail-cut-strings {
+    font-size: 18px;
+}
+
+
+/*좋아요,싫어요 삭제*/
+
+.kboard-button-like {
+    display: none;
+}
+
+.kboard-button-unlike {
+    display: none;
+}
+
+#kboard-default-list thead,
+#kboard-thumbnail-list thead {
+    background: #f7f7f7 !important;
+    border: transparent !important;
+}
+
+#kboard-default-list .kboard-list tbody tr.kboard-list-notice,
+#kboard-thumbnail-list .kboard-list tbody tr.kboard-list-notice {
+    background-color: #ffffff !important;
+}
+
+#kboard-default-list .kboard-list,
+#kboard-thumbnail-list .kboard-list {
+    border-top: 2px solid #d3d3d3;
+    border-bottom: 2px solid #d3d3d3;
+    border-left: 1px solid #eaeaea;
+    border-right: 1px solid #eaeaea;
+}
+
+#kboard-default-list .kboard-list table td.kboard-list-uid{
+    width: 100%;
+    max-width: 14%;
+    padding: 0.5rem;
+    border-right: 1px solid #eaeaea;
+}
+
+
+
+#kboard-default-list .kboard-list table td,
+#kboard-thumbnail-list .kboard-list table td {
+    padding: 0.3rem 0.5rem !important;
+    border-right: 1px solid #eaeaea !important;
+}
+
+#kboard-default-list .kboard-list table td.kboard-list-user,
+#kboard-thumbnail-list .kboard-list table td.kboard-list-user {
+    width: 100%;
+    max-width: 16%;
+}
+
+#kboard-default-list .kboard-list table td.kboard-list-date,
+#kboard-thumbnail-list .kboard-list table td.kboard-list-date {
+    width: 100%;
+    max-width: 19%;
+}
+
+.kboard-list {
+    margin-bottom: 0.7rem;
+}
+
+.kboard-list td {
+    font-size: 0.8rem;
+    font-weight: 300 !important;
+    color: #555 !important;
+}
+
+form#kboard-search-form-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.kboard-default-cut-strings {
+    color: #555 !important;
+}
+
+button.kboard-default-button-small,
+button.kboard-thumbnail-button-small {
+    background: #fff !important;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    height: auto !important;
+    padding: 0.1rem 0.5rem;
+    line-height: 1em;
+    font-size: 0.8rem;
+}
+
+.kboard-search input[type="text"] {
+    border-color: #767676 !important;
+    background: #ffffff !important;
+    padding: 0.1rem 0 !important;
+    width: 20% !important;
+    max-width: 174px !important;
+    margin-right: 0.5rem !important;
+    min-width: 150px !important;
+}
+
+.kboard-search select {
+    width: 6% !important;
+    max-width: 100px;
+    border-color: #767676 !important;
+    height: auto !important;
+    padding: 0.1rem 0.1rem !important;
+    font-size: 0.7rem !important;
+    color: #000 !important;
+    border-radius: 2px !important;
+    margin-right: 1.5rem !important;
+}
+
+.kboard-control a.kboard-default-button-small,
+.kboard-control a.kboard-thumbnail-button-small {
+    background: #fff !important;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    height: auto !important;
+    padding: 0.2rem 0.4rem;
+    line-height: 1em;
+    font-size: 0.8rem;
+    color: #000 !important;
+}
+
+
+/*게시글*/
+
+#kboard-default-document .kboard-title h1,
+#kboard-thumbnail-document .kboard-title h1 {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-weight: 100;
+    font-size: 0.8rem;
+    line-height: 1rem;
+}
+
+.kboard-content {
+    border-bottom: 2px solid #d3d3d3;
+    border-left: 1px solid #eaeaea !important;
+    border-right: 1px solid #eaeaea !important;
+}
+
+#kboard-default-document .kboard-title,
+#kboard-thumbnail-document .kboard-title {
+    float: left;
+    width: 100%;
+    border-top: 2px solid #d3d3d3;
+    border-left: 1px solid #eaeaea;
+    border-right: 1px solid #eaeaea;
+}
+
+.detail-attr.detail-view {
+    display: none !important;
+}
+
+#kboard-default-document .kboard-detail .detail-attr,
+.detail-attr.detail-date {
+    width: 100%;
+    padding: 0 !important;
+    border-bottom: 1px solid #eaeaea;
+}
+
+#kboard-thumbnail-document .kboard-detail .detail-attr {
+    width: 100%;
+    padding: 0 !important;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.detail-name {
+    border-right: 1px solid #eaeaea !important;
+    width: 15%;
+    text-align: center !important;
+    padding: 0.3rem 1rem;
+    background: #f7f7f7;
+    min-width: 80px;
+}
+
+#kboard-default-list .kboard-list table a,
+.kboard-thumbnail-cut-strings {
+    font-size: 0.9rem;
+}
+
+#kboard-default-document .kboard-detail,
+#kboard-thumbnail-document .kboard-detail {
+    background: #ffffff !important;
+}
+
+.kboard-search button.kboard-default-button-small:before,
+.kboard-search button.kboard-thumbnail-button-small:before {
+    width: 15px;
+    height: 15px;
+    content: "";
+    vertical-align: middle;
+    background: url(/wp-content/uploads/2024/08/reading-glasses-icon.jpg);
+    display: inline-block;
+    background-size: cover;
+}
+
+#kboard-default-document .kboard-title h1:before,
+#kboard-thumbnail-document .kboard-title h1:before {
+    content: "제목";
+    font-size: 0.8rem;
+    border-right: 1px solid #eaeaea;
+    width: 15%;
+    min-width: 80px;
+    box-sizing: border-box;
+    text-align: center !important;
+    padding: 0.3rem 1rem;
+    background: #f7f7f7;
+    display: inline-block;
+    color: #000;
+    font-weight: 100;
+    margin-right: 1.5rem;
+}
+
+#kboard-default-document .kboard-detail .detail-attr .detail-name,
+#kboard-thumbnail-document .kboard-detail .detail-attr .detail-name {
+    float: left;
+    font-weight: 100;
+    color: #000000;
+    font-size: 0.8rem;
+}
+
+#kboard-default-document .kboard-detail .detail-attr .detail-value,
+#kboard-thumbnail-document .kboard-detail .detail-attr .detail-value {
+    float: left;
+    padding-left: 1.5rem;
+    color: #000;
+    line-height: 2.1em;
+}
+
+#kboard-default-document .kboard-content,
+#kboard-thumbnail-document .kboard-content {
+    min-height: 100px !important;
+}
+
+#kboard-default-document .kboard-content .content-view,
+#kboard-thumbnail-document .kboard-content .content-view {
+    padding: 1.5rem 0.5rem;
+}
+
+button.kboard-button-action.kboard-button-print {
+    display: none;
+}
+#kboard-default-list .kboard-search select {
+    min-width: 52px !important;
+}
+#kboard-thumbnail-list .kboard-search select {
+    min-width: 52px !important;
+}
+/* 겔러리형태 */
+.kboard-list tr {
+    min-width: 33% !important;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    float: left;
+}
+
+#kboard-thumbnail-list .kboard-list table td.kboard-list-uid {
+    
+}
+/*  */
+
+@media only screen and (max-width: 1020px) {
+#kboard-default-list .kboard-list table td.kboard-list-user, #kboard-thumbnail-list .kboard-list table td.kboard-list-user {
+    width: 100%;
+    max-width: 22% !important;
+}
+}
+
+/*kboard set********************************************************************END*/
+
+</style>
+<body>
+    
+</body>
+</html>

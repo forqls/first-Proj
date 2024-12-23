@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover</title>
+
+    <style>
+        /* *이벤트
+        =>사용자가 어떠한 행동을 했을때 다른 결과물로 표현해줌
+        
+        *:hover
+        =>마우스를 올렸을 때 명령어 실행
+        =>요소 위에 마우스를 올렸을때 스타일을 다르게 지정해줄 수 있음
+        =>웬만한 스타일 지정가능 */
+
+        /* -hover이벤트 적용할때
+        =>'요소에 마우스를 올리면 요소가 다른스타일로 변경' 식으로 적어주면됨 */
+
+
+
+        *{margin: 0; padding: 0;}
+
+        #box {
+            width: 300px;
+            height: 300px;
+            background-color: brown;
+        }
+
+
+        #box:hover {
+            background-color: cadetblue;
+            width: 500px;
+        }
+
+        #out_box{
+            width: 600px;
+            height: 500px;
+            background-color: coral;
+            /* float: left; */
+            padding: 150px 200px;
+            box-sizing: border-box;
+
+            /* * 자식에게  margin-top값을 넣었을때
+            =>부모와 자식의 간격이 같이 떨어지는 경우
+            =>해결방법
+            1. margin-top값을 넣어준 자식에게 float값을 넣어줌
+            2. 자식대신 부모에게 float값을 넣어줌
+            3. margin-top값을 대신 부모에게 padding으로 간격을 넣어줌
+            (대신 padding을 넣은만큼 박스 크기가 커질 수 있음 주의
+            ->box-sizing넣어주기)
+
+            *** 주의할점 ***
+            margin: 0와 auto와 float값은 함께 사용할 수 없음
+            =>우선순위가 항상 float가 높기 때문
+            margin: 0 auto값이 적용되지 않음 */
+        }
+
+
+
+        #in_box{
+            width: 200px;
+            height: 200px;
+            background-color: cornsilk;
+            /* margin: 150px auto; */
+
+            /* float: left; */
+        }
+
+        /* *부모한데 마우스를 올리면 자식의 스타일변경
+        =>반드시 부모, 자식 계열이여야됨
+        =>부모:hover>자식 {
+            스타일 변경
+        } */
+
+        #out_box:hover>#in_box {
+            background-color: darkgreen;
+        }
+
+        #out_box>#in_box:hover {
+            background-color: darkseagreen;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+
+    <div id="box"></div>
+
+    <div id="out_box">
+        <div id="in_box"></div>
+    </div>
+    
+    
+</body>
+</html>

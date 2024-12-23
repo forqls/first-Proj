@@ -1,0 +1,167 @@
+@media all and (min-width:1200px) {
+
+    header, section, footer {
+        width: 100%;
+        float: left;
+        position: relative;
+        text-align: center;
+    }
+    
+    .container, .title {
+        width: 1200px;
+        height: 100%;
+        margin: 0 auto;
+        line-height: 90px;
+    }
+
+    section {
+        margin-bottom: 110px;
+    }
+    
+
+    /* 공통영역 end */
+
+    #wrap {
+        width: 100%;
+    }
+
+    #in-header {
+        width: 1200px;
+        font: 900 18px/90px '';
+        color: rgb(46, 65, 46);
+        position: absolute;
+        top: 0;
+        left: 250px;
+        z-index: 99;
+    }
+
+    #logo {
+        float: left;
+        margin-top: 30px;
+        margin-right: 50px;
+    }
+
+    #menu-wrap {
+        width: 800px;
+        height: 90px;
+        float: left;
+    }
+
+    #menu-wrap>li {
+        width: 25%;
+        height: 100%;
+        float: left;
+    }
+
+    /* header end  */
+
+    #section-1 {
+        width: 100%;
+        height: 900px;
+        background-image: url(../img/pcsection.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+    }
+
+    /* section-1 end  */
+
+    .title {
+        text-align: center;
+        font: 100 25px/90px '';
+    }
+
+    .con {
+        float: left;
+    }
+
+    .con:nth-child(1), .con:nth-child(3) {
+        margin-right: 20px;
+        margin-left: 10px;
+    }
+
+    .con:nth-child(1), .con:nth-child(2) {
+        margin-bottom: 20px;
+    }
+
+    /* section-2 end  */
+
+    .con-2 {
+        width: 400px;
+        overflow: hidden;
+        float: left;
+    }
+
+    .con-2>img {
+        width: 100%;
+    }
+
+    .title-box {
+        text-align: center;
+    }
+
+    .con-2:nth-child(1), .con-2:nth-child(2), .con-2:nth-child(3) {
+        margin-bottom: 80px;
+    }
+
+    /* section-3 end */
+
+    #section-4 {
+        width: 100%;
+        height: 700px;
+        background-image: url(../img/bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+    }
+
+    /* section-4 end */
+
+    .con-5 {
+        width: 200px;
+        float: left;
+    }
+
+    .con-5>img {
+        width: 100%;
+    }
+
+    /* section-5 end  */
+
+    .con-6 {
+        width: 393.333px;
+        float: left;
+        margin-right: 10px;
+    }
+
+    .con-6:last-child {
+        margin-right: 0;
+    }
+
+    .con-6>img {
+        width: 100%;
+    }
+
+    /* section-6 end  */
+
+    #copyright {
+        width: 100%;
+        height: 100px;
+        background-color: rgb(35, 38, 41);
+        color: white;
+        line-height: 100px;
+    }
+
+    #top-btn {
+        width: 60px;
+        height: 60px;
+        background-color: tomato;
+        position: fixed;
+        bottom: 80px;
+        right: 80px;
+        font: 900 20px/60px '';
+    }
+
+}/* :end */

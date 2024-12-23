@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>에니메이션</title>
+    <style>
+        *{margin: 0; padding: 0;}
+
+
+        #box {
+            width: 300px;
+            height: 300px;
+            background-color: cadetblue;
+
+            animation-name: box-move;
+            /* =>에니메이션 네임(키프레임)을 넣어줌
+            =>시간값, 횟수값, 방향값, 정지값을 적용하는 요소에 넣어야함 */
+
+            animation-duration: 1s;
+            /* =>에니메이션 움직임 지속 시간값을 넣어줘야 나옴 */
+
+            animation-iteration-count: 5;
+            /* =>에니메이션 반복횟수값(단위값 없음)
+            =>infinite를 넣어주면 무한반복함 */
+
+            animation-delay: 1s;
+            /* =>애니메이션 지연시간 */
+            /* =>순서대로 나오게 할 수 있음, 많이 활용됨 */
+
+            animation-direction: alternate;
+            /* 애니메이션 진행 방향
+            1. normal:from~to
+            (아무것도 넣지 않았을때 기본값)
+            =>도착지점에 도달하면 사라졌다가 다시 시작점에서 출발 */
+            /* 2.alternate: from~to~from
+            (일반적으로 가장 많이 사용되는 움직임)
+            ->첫 지점에서 도착지점 다시돌아가면서 왔다갔다함 */
+            /* 3.reverse: normal과 반대, 거꾸로 to~from
+            (도착지점에서 출발함) */
+            /* 4.alternate-reverse: alternate와 반대, to~from~to
+            (끝점에서 출발함) */
+
+            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+            /* =>에니메이션 가속도 형태 */
+        }
+
+
+
+        /* *에니메이션 기본 틀 
+        @keyframes 에니메이션이름{
+
+            from { <- 시작값 (=0%)}
+                내용
+            }
+            50% { <- 중간값
+                내용
+            }
+
+            to { <- 끝값 (= 100%)
+                내용
+            } */
+
+            
+            @keyframes box-move {
+                from {
+                    margin-left: 0;
+                }
+                to {
+                    margin-left: 300px;
+                }
+            }
+
+
+    </style>
+</head>
+<body>
+
+    <div id="box"></div>
+    
+</body>
+</html>

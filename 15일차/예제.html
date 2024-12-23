@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex예제</title>
+    <style>
+
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{ text-decoration: none; color: black;}
+
+        #wrap {
+            width: 100%;
+        }
+
+        header, section, footer {
+            width: 100%;
+            float: left;
+        }
+
+        #in-header, #container {
+            width: 78.12%;/* 1500 */
+            height: 100%;
+            background-color: blanchedalmond;
+            margin: 0 auto;
+        }
+
+        /* 공통영역 */
+
+        header {
+            height: 70px;
+            background-color: burlywood;
+            border-bottom: 1px solid #dbdbdb;
+            position: fixed;
+            top: 0;
+            left: 0;
+            font: 900 22px/70px '';
+            text-align: center;
+        }
+
+        #logo {
+            width: 16.666%;/* 200px */
+            height: 100%;
+            background-color: tomato;
+            font-weight: 900;
+        }
+
+        #in-header {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #menu-wrap {
+            width: 66.666%;/* 800px */
+            height: 100%;
+            background-color: salmon;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #side_menu {
+            width: 100px;
+            height: 100%;
+            background-color: #dbdbdb;
+        }
+
+        #menu-wrap>li {
+            width: 25%;
+            height: 100%;
+            background-color: rgb(248, 248, 144);
+        }
+
+        /* header end  */
+
+
+        #section-1 {
+            height: 800px;
+            background-color: peachpuff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* =>축에따라 수평이 바뀜  */
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 80px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        /* section-1 end  */
+
+        #section-2 {
+            padding: 110px 0;
+        }
+
+        #container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .con {
+            width: 31%;
+            height: 600px;
+            background-color: lightcoral;
+        }
+
+        /* section-2 end  */
+
+        footer {
+            height: 80px;
+            background-color: blanchedalmond;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #footer-logo>a {
+            color: tomato;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="wrap">
+
+        <header>
+            <div id="in-header">
+                <div id="logo"><a href="#">logo</a></div>
+                <ul id="menu-wrap">
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">menu</a></li>
+                </ul>
+                <div id="side_menu"><a href="#">로그인</a></div>
+            </div>
+        </header> 
+        <!-- header end -->
+
+        <section id="section-1">
+            <h1>Flex 예제</h1>
+            <p>플랙스예제를 풀어보아요</p>
+        </section>
+        <!-- section-1 end -->
+
+        <section id="section-2">
+            <div id="container">
+                <div class="con"></div>
+                <div class="con"></div>
+                <div class="con"></div>
+            </div>
+        </section>
+        <!-- section-2 end -->
+
+        <footer>
+            <div id="footer-logo"><a href="#">footer logo</a></div>
+        </footer>
+        <!-- footer end  -->
+
+    </div>
+
+</body>
+</html>

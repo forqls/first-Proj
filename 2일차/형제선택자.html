@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>형제선택자</title>
+    <style>
+
+        /* *선택자+선택자(인접 형제 선택자)
+        -기준선택자의 형제로 바로 뒤에 있는 선택자 선택시 사용
+        -기준 선택자를 선택하고, + 다음 바로 뒤에 있는 선택자
+        바로 뒤에 있는 선택자에게 지정되는 스타일
+
+        *선택자~선택자 (일반 형제 선택자)
+        -기준선택자의 형제로 그냥 뒤에 있는 선택자 선택시 사용
+        -기준선택자 선택하고, ~ 다음 그냥 뒤에 있는 선택자
+        그냥 뒤에 있는 선택자에게 지정되는 스타일 */
+
+        h1+h2 { 
+            color: cornflowerblue;
+        }
+        /* h1~h2도 상관은 없음  */
+
+        h1~h3 {
+            color: crimson;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>기준선택자</h1>
+    <h2>인접형제선택자</h2>
+    <h3>일반형제선택자</h3>
+    <h3>일반형제선택자</h3>
+    
+</body>
+</html>

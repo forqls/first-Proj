@@ -1,0 +1,166 @@
+@media all and (min-width: 1200px) {
+
+header, section, footer {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+#in-header, #container {
+    width: 1200px;
+    height: 100%;
+    background-color: lavender;
+    margin: 0 auto;
+}
+/* 공통영역 ead  */
+
+#wrap {
+    width: 100%;
+}
+
+header {
+    height: 100px;
+    background-color: lavenderblush;
+    text-align: center;
+    z-index: 99;
+    /* 덮히는 녀석에게 직접 포지션 넣어서 제트인덱스 넣어도 됨
+    header에 포지션 값 있기 떄문에 header에 넣음  */
+}
+
+#logo {
+    width: 150px;
+    height: 100%;
+    background-color: lightsteelblue;
+    line-height: 100px;
+    float: left;
+    font: 900 25px/100px '';
+}
+
+#mo-wrap {
+    display: none;
+}
+
+#menu-wrap {
+    width: 960px;
+    height: 80px;
+    background-color: oldlace;
+    float: right;
+}
+
+.top-menu {
+    width: 20%;
+    height: 100%;
+    background-color: linen;
+    float: left;
+    font: 20px/75px '';
+}
+
+.sub-menu {
+    width: 100%;
+    height: 0;
+    background-color: rgb(255, 228, 255);
+    font: 16px/50px '';
+    overflow: hidden;
+    transition-duration: 0.5s;
+}
+
+.sub-menu>li {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid rgb(121, 111, 121);
+    box-sizing: border-box;
+}
+
+.top-menu:hover {
+    background-color: rgb(236, 219, 253);
+}
+
+.top-menu:hover .sub-menu {
+    height: 150px;
+}
+
+.sub-menu>li:hover {
+    background-color: rgb(253, 230, 230);
+}
+
+/* 꺾쇠(>)는 자식, 띄어쓰기는 자손, 자식선택자 */
+
+/* header end  */
+
+#section-1 {
+    height: 300px;
+    background-color: rgb(191, 209, 224);
+}
+
+/* section-1 end  */
+
+#section-2 {
+    background-color: rgb(226, 226, 253);
+    padding: 30px 0;
+    /* 높이값이 정해져있다면 패딩간격을 넣어야 하지만
+    자식들에게 맞춰주게 들어가있기 떄문에 box-sizing
+    넣을 필요 없음 margin넣어도 상관없음 */
+}
+
+#top-wrap {
+    width: 100%;
+    height: 100px;
+    background-color: lavenderblush;
+}
+
+#top-wrap>li {
+    width: 380px;
+    height: 100%;
+    background-color: rgb(214, 241, 250);
+    float: left;
+    margin-right: 30px;
+}
+
+#top-wrap>li:last-child {
+    margin-right: 0;
+}
+
+#bottom-wrap {
+    width: 100%;
+    /* 높이값 제거한 순간 높이값을 잘 인식 못해서 
+    container도 높이값 제대로 인식 못하기때문에 hidden
+    넣어줌. 부모의 높이값을 싹다 제거해 주면 자식에게 맞춰
+    지기 때문에 원하는 값 알 수 있음 */
+    /* background-color: lightyellow; */
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.con-wrap {
+    width: 600px;
+    height: 100%;
+    background-color: rgb(229, 214, 255);
+    float: left;
+}
+
+.con-wrap>li {
+    width: 190px;
+    height: 30px;
+    background-color: mistyrose;
+    float: left;
+    margin-right: 15px;
+    transition-duration: 0.5s;
+}
+
+.con-wrap>li:last-child {
+    margin-right: 0;
+}
+
+.con-wrap>li:hover {
+    height: 100px;
+}
+
+footer {
+    height: 100px;
+    background-color: rgb(224, 204, 224);
+}
+
+
+
+
+}/* end  */

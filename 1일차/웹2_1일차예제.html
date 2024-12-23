@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제</title>
+
+    <style>
+
+        *{margin: 0; padding: 0;}
+        a {text-decoration: none; color: black;}
+        ul {list-style: none;}
+
+        #wrap {
+            width: 100%;
+        }
+
+        header {
+            width: 100%;
+            height: 500px;
+            background-color: lightcyan;
+        }
+
+        #logo-wrap {
+            width: 100%;
+            height: 100px;
+            background-color: lightgoldenrodyellow;
+            margin:0 auto;
+        }
+
+        #logo {
+            width: 200px;
+            height: 100px;
+            background-color: lightgreen;
+            text-align: center;
+            line-height: 100px;
+            color: rgb(255, 146, 162);
+            float: left;
+            margin-left: 255px;
+        }
+
+        .bold {
+            font-weight: 900;
+        }
+
+        #menu-wrap {
+            width: 1000px;
+            height: 100px;
+            background-color: rgb(255, 190, 164);
+            float: left;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -400px;
+        }
+
+        #menu-wrap>li {
+            width: 200px;
+            height: 100%;
+            line-height: 100px;
+            text-align: center;
+            float: left;
+        }
+
+        #section-1 {
+            margin-top: 50px;
+        }
+
+        #circle-wrap {
+            width: 1200px;
+            height: 262.5px;
+            margin: 0 auto;
+        }
+
+        .cirlce {
+            width: 262.5px;
+            height: 262.5px;
+            background-color: rgb(255, 255, 255);
+            border: 1px solid black;
+            box-sizing: border-box;
+            border-radius: 50%;
+            margin: left;
+        }
+
+        #section-2 {
+            margin-top: 50px;
+            background-color: rgb(134, 247, 134);
+        }
+
+        #container {
+            width: 1200px;
+            height: 1700px;
+            background-color: rgb(211, 253, 211);
+            margin: 0 auto;
+        }
+
+        #con-1 {
+            width: 100%;
+            height: 500px;
+            margin: 0 auto;
+        }
+
+        .t-box {
+            width: 386.666px;
+            height: 500px;
+            
+        }
+
+
+          
+
+
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div id="logo-wrap">
+                <span class="bold">
+                <div id="logo">로고</div>
+                <ul id="menu-wrap">
+                    <li>메뉴1</li>
+                    <li>메뉴2</li>
+                    <li>메뉴3</li>
+                    <li>메뉴4</li>
+                    <li>메뉴5</li>
+                </ul>
+                </span>
+            </div>
+        </header>
+        <!-- header end  -->
+
+        <section id="section-1">
+            <div id="circle-wrap">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+        </section>
+        <section id="section-2">
+            <div id="container">
+                <div id="con-1">
+                    <div class="t-box"></div>
+                    <div class="t-box"></div>
+                    <div class="t-box"></div>
+                </div>
+                <div id="m-con">
+                    <div class="long" id="m-box1"></div>
+                    <div class="short" id="m-box2"></div>
+                    <div class="long" id="m-box3"></div>
+                </div>
+                <div id="b-con">
+                    <div class="short" id="b-box1"></div>
+                    <div class="long" id="b-box2"></div>
+                    <div class="short" id="b-box3"></div>
+                </div>
+            </div>   
+        </section>
+
+        <div id="top-box"><span class="bold"><a href="#"> top</a></span></div>
+    </div>
+    
+</body>
+</html>

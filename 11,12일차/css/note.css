@@ -1,0 +1,159 @@
+@media all and (max-width: 1199px) and 
+(min-width: 960px) {
+
+header, section, footer {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+#in-hedaer, #container {
+    width: 960px;
+    height: 100%;
+    background-color: lavender;
+    margin: 0 auto;
+}
+/* 공통영역 end  */
+
+#wrap {
+    width: 100%;
+}
+
+header {
+    height: 200px;
+    background-color: lavenderblush;
+    text-align: center;
+    z-index: 99;
+}
+
+#in-header {
+    width: 960px;
+    height: 100%;
+    background-color: lavender;
+    margin: 0 auto;
+}
+
+#logo {
+    width: 150px;
+    height: 100px;
+    background-color: lightsteelblue;
+    line-height: 100px;
+    margin: 0 auto 10px auto;
+    font: 900 25px/100px '';
+}
+
+#mo-wrap {
+    display: none;
+}
+
+#menu-wrap {
+    width: 960px;
+    height: 80px;
+    background-color: oldlace;
+    margin: 15px auto 15px auto;
+}
+
+.top-menu {
+    width: 20%;
+    height: 100%;
+    background-color: linen;
+    float: left;
+    font: 20px/75px '';
+}
+
+.sub-menu {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background-color: rgb(255, 228, 255);
+    font: 16px/50px '';
+    transition-duration: 0.5s;
+}
+
+.sub-menu>li {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid rgb(172, 160, 172);
+    box-sizing: border-box;    
+}
+
+.top-menu:hover {
+    background-color: rgb(236, 219, 253);
+}
+
+.top-menu:hover .sub-menu {
+    height: 150px;
+}
+
+.sub-menu>li:hover {
+    background-color: rgb(253, 230, 230);
+}
+
+/* header end  */
+
+#section-1 {
+    height: 300px;
+    background-color: rgb(191, 209, 224);
+}
+
+#section-2 {
+    background-color: rgb(226, 226, 253);
+    padding: 30px 0;
+}
+
+#top-wrap {
+    width: 100%;
+    height: 100px;
+    background-color: lavenderblush;
+}
+
+#top-wrap>li {
+    width: 300px;
+    height: 100%;
+    background-color: rgb(214, 241, 250);
+    float: left;
+    margin-right: 30px;
+}
+
+#top-wrap>li:last-child {
+    margin-right: 0;
+}
+
+#bottom-wrap {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.con-wrap {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(229, 214, 255);
+    float: left;
+}
+
+.con-wrap>li {
+    width: 150px;
+    height: 30px;
+    background-color: mistyrose;
+    float: left;
+    margin-right: 15px;
+    transition-duration: 0.5s;
+}
+
+.con-wrap>li:last-child {
+    margin-right: 0;
+}
+
+.con-wrap>li:hover {
+    height: 100px;
+}
+
+/* section end  */
+
+footer {
+    height: 100px;
+    background-color: rgb(224, 204, 224);
+}
+
+
+}/* end  */

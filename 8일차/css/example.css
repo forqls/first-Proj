@@ -1,0 +1,219 @@
+
+#wrap {
+    width: 100%;
+    text-align: center;
+}
+
+header {
+    width: 100%;
+    height: 200px;
+    background-color: lemonchiffon;
+    position: fixed;
+    top: -150px;
+    left: 0;
+    z-index: 99;
+    /* =>header의 z축 올라오게함. position값이 있어야 z축 넣을 수 있음 */
+    transition-duration: 0.5s;
+}
+
+#menu-wrap {
+    width: 1200px;
+    height: 100%;
+    background-color: plum;
+    margin: 0 auto;
+    display: none;
+}
+
+#menu-wrap> li {
+    width: 20%;
+    height: 100%;
+    background-color: lightcyan;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 200px;
+    float: left;
+}
+
+#menu-wrap> #logo {
+    background-color: thistle;
+}
+
+#btn {
+    width: 50px;
+    height: 50px;
+    background-color: lightcoral;
+    margin: 150px auto 0 auto;
+    font: 900 30px/50px'';
+    color: wheat;
+}
+
+/* #sharp {
+    width: 50px;
+    height: 50px;
+    background-color: lightgreen;
+    margin: 150px auto 0 auto;
+    position: relative;
+    line-height: 50px;
+    text-align: center;
+} */
+
+
+header:hover #menu-wrap {
+    display: block;
+}
+
+header:hover #btn {
+    display: none;
+}
+
+header:hover {
+    top: 0;
+}
+
+section {
+    width: 100%;
+    background-color: blanchedalmond;
+    float: left;
+}
+
+#container {
+    width: 1200px;
+    background-color: brown;
+    overflow: hidden;
+    /* =>자식이 블럭요소 일떄는 크기값을 제대로 인식 하지만 자식에게
+    float값이 들어가면 오른쪽을 가득 채우고 있던 여백값이 사라지면서
+    높이값을 제대로 인식하지 못함=>높이값을 직접 적어주던지 
+    hidden을 사용해서 사라졌던 높이값을 다시 인식시켜준다. */
+    margin: 70px auto 30px auto;
+}
+
+#title-wrap {
+    width: 100%;
+    height: 50px;
+    background-color: lightcoral;
+}
+
+.box {
+    width: 240px;
+    height: 400px;
+    background-color: peachpuff;
+    border: 1px solid lemonchiffon;
+    box-sizing: border-box;
+    float: left;
+    /* =>부모에게 overflow: hidden; 넣어줌 */
+    position: relative;
+    /* =>left랑 right 부모를 기준으로 겹쳐있어야함 */
+}
+
+.hover-box {
+    width: 240px;
+    height: 400px;
+    background-color: rgb(250, 201, 201);
+    overflow: hidden;
+}
+
+.in-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* =>left랑 right 부모를 기준으로 좌측상단에 겹치게함 */
+}
+
+#title-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    float: left;
+}
+
+.title {
+    width: 90%;
+    height: 80px;
+    margin: 0 5% 20px 5%;
+    text-align: center;
+    line-height: 80px;
+    background-color: rgb(252, 196, 177);
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 1px solid gray;
+    box-sizing: border-box;
+}
+
+/* .p-box {
+    width: 50%;
+    height: 150px;
+    background-color: lavenderblush;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    float: left;
+}
+
+.q-box {
+    width: 50%;
+    height: 150px;
+    background-color: lavenderblush;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    float: left;
+} */
+
+#con-wrap, #list-wrap {
+    width: 100%;
+    height: 300px;
+    background-color: papayawhip;
+}
+
+#con-wrap>li {
+    width: 50%;
+    height: 50%;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    float: left;
+}
+
+.list-wrap>li {
+    width: 100%;
+    height: 75px;
+    background-color: papayawhip;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    float: left;
+}
+
+.list-wrap>li:hover {
+    background-color: rgb(252, 252, 181);
+}
+
+#con-wrap>li:hover {
+    background-color: mistyrose;
+}
+
+
+
+.ieft-box {
+    background-color: rgb(191, 184, 233);
+}
+
+.right-box {
+    background-color: thistle;
+    left: 240px;
+    transition-duration: 0.5s;
+}
+
+.hover-box:hover> .right-box {
+    left: 0;
+}
+
+.box:hover {
+    background-color: plum;
+}
+
+
+footer {
+    width: 100%;
+    height: 200px;
+    background-color: rgb(253, 246, 179);
+    float: left;
+}

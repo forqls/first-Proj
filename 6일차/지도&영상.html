@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <style>
+        *{margin: 0; padding: 0;}
+
+        h1 {
+            margin: 100px 0 80px 0;
+        }
+
+        /* *video 태그
+        -video는 html문서에 동영상을 삽입하는 태그
+
+        *비디오 태그 속성
+        1. src
+        -삽입할 비디오의 주소 */
+
+        /* 2. width, height (css로 지정 가능)
+        -비디오의 너비와 높이 */
+
+        /* 3. controls
+        -오디오 재생에 관한 조절 장치를 보여줌
+        -playback, pause, resume, volume등 */
+
+        /* 4. autoplay
+        -비디오가 로드 되면 자동 실행
+        -IE9+, Chrome, FF, Safari, Opera 지원
+        -2018 4월 이후 크롬 브라우저에서 소리가 아노는 동영상 자동 재생
+        되지않음, muted처리시 자동재생됨 */
+
+        /* 5. muted 
+        -비디오의 소리 음소거 결정. 쓰면 음소거됨 */
+
+        /* 6. loop
+        -비디오 반복 재생 */
+
+        video {
+            width: 1600px;
+            height: 500px;
+            border: 5px solid black;
+            object-fit: cover;
+        }
+        /* ->자기 비율대로 들어감 */
+
+        /* *object-fit:종류;
+        =>img, video, object, svg 같은 태그의 내용을 지정된 너비와 높이를 맞춰줌
+        =>backbround-size 속성과 매우 유사
+        *종류
+        -fill: 이미지 비율을 무시한채로 강제로 크기를 늘려줌
+        -contain: 이미지 비율을 유지한채로 부모 크기에 맞춰줌(새로값에 가득 차면 여백 생성됨)
+        -cover: 이미지 비율을 유지한채로 부모 밖으로 넘치는 영역을 잘라줌
+        (가로크기에 가득차 넘치는 영역은 잘려서 보이지 않음) 
+        비디오가 그렇게 고화질은 아님=> 소스를 외부의 어딘가에 올려놓아서 불러오는 iframe
+        태그는 상관없는데 src경로로 들고온다면 고화질의 비디오가 로딩되는 속도가 느려서
+        비디오가 재생되지 않을수도 있기때문=>용량을 최대한 줄여주는것이 좋음*/
+
+
+
+    </style>
+</head>
+<body>
+
+
+     <h1>유튜브 영상 불러오기</h1>
+     <iframe width="1217" height="685" src="https://www.youtube.com/embed/j3wH7vQ1lUM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
+
+     
+    <h1>카카오 지도 불러오기</h1>
+    <!-- * 카카오맵 - 지도퍼가기 -->
+    <!-- 1. 지도 노드 -->
+    <div id="daumRoughmapContainer1637140491756" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+    <!--
+        2. 설치 스크립트
+        * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+    -->
+    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+    <!-- 3. 실행 스크립트 -->
+    <script charset="UTF-8">
+        new daum.roughmap.Lander({
+            "timestamp" : "1637140491756",
+            "key" : "2847m",
+            "mapWidth" : "640",
+            "mapHeight" : "360"
+        }).render();
+    </script>
+    <!-- 
+        기호 클릭->html태그복사-> 소스생성하기->
+        복사 후 붙여넣기.
+        카카오 지도는 잘 안불러와짐  -->
+
+        <h1>구글 지도 불러오기</h1>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.8338562292656!2d129.05212905120138!3d35.160764080222414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568eb6c13a663bd%3A0xe00a0c7895e1b9b0!2z67aA7IKw6rSR7Jet7IucIOu2gOyCsOynhOq1rCDrtoDsoITrj5kgNDA4LTIx!5e0!3m2!1sko!2skr!4v1637140741585!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <!-- 원하는 위치 클릭-> 공유-> 지도 퍼가기->html복사  -->
+
+        <h1>비디오 불러오기</h1>
+        <video src="video/vid1.mp4"></video>
+
+        <h1>비디오 컨트롤박스 생성</h1>
+        <video src="video/vid1.mp4" controls></video>
+        <!-- ->컨트롤 장치가 있음 자동재생 아님 -->
+
+        <h1>비디오 자동재생</h1>
+        <video src="video/vid1.mp4" autoplay muted ></video>
+
+        <h1>비디오 반복재생</h1>
+        <video src="video/vid1.mp4" autoplay muted loop></video>
+
+        <br/><br/><br/><br/>
+        <br/><br/><br/><br/>
+
+</body>
+</html>

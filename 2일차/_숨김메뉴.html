@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숨김메뉴</title>
+    <style>
+
+        *{margin: 0; padding: 0;}
+
+        input {
+            display: none;
+        }
+
+        #wrap {
+            width: 400px;
+            height: 500px;
+            border: 10px solid black;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        label {
+            width: 50px;
+            height: 50px;
+            background-color: aliceblue;
+            display: block; /* 인라인요소이기때문에 블럭으로 바꿔줘야 크기값 들어감 */
+            font: 900 25px/50px '';
+            text-align: center;
+        }
+
+        #move_box {
+            width: 100%;
+            height: 300px;
+            background-color: rgb(215, 235, 235);
+            position: relative;
+            left: -400px;
+            transition-duration: 1s;
+
+        }
+
+        #btn:checked~#move_box {
+            left: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div id="wrap">
+
+        <input type="checkbox" id="btn" />
+        <label for="btn">=</label>
+    
+        <div id="move_box">
+            <h1>옆에서 움직임</h1>
+        </div>
+    
+    
+    </div>
+
+
+    
+</body>
+</html>

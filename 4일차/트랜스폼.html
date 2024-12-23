@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트랜스폼</title>
+    <style>
+
+        /* *transform속성
+        =>박스에 왜곡 또는 기울기 움직임 회전값 지정속성
+        transform:속성값;
+        -2D변형
+        x,y축 활용
+        =>단, 회전은 z활용
+        translate 위치값
+        scale 크기값
+        rotate 회전값
+        skew기울기 */
+
+        *{margin: 0; padding: 0;}
+
+        #box {
+            width: 300px;
+            height: 300px;
+            background-color: rgb(141, 168, 168);
+            margin: 300px auto;
+
+            /* transform: translate(300px 300px); */
+            /* =>기본적으로 부모의 왼쪽 상단을 기준으로 변경
+            (x는 가로, y는 세로)
+            =>만약 값을 하나만 적으면 기복적으로 가로값(x축)이 적용됨
+            두개 넣으면 순서대로 x축, y축 적용됨
+            =>포지션값 없이 자체를 옯길 수 있는 속성 */
+            /* 위치 속성: margin, position, transform  */
+
+            /* transform: rotateZ(45deg); */
+            /* =>축이 z인 이유:z축 y축은 2d 상태에선 보이지 않기 때문에
+            z축으로 지정하면 중심축을 기준으로 회전할 수 있음
+            (각도는 -360~ +360 까지 넣을 수 있음) */
+
+            /* transform: scale(2);  */
+            /* =>부모의 중심점에서 크기변경
+            =>단위는 없음
+            =>마우스를 대면 확대되는 이미지 효과에 많이 사용 */
+
+            /* transform: skewX(-45deg);
+            =>각도값에 따라 기울기  */
+
+            transition-duration: 3s;
+
+
+            transform-origin: 0% 0%;
+            =>회전을 할때 중심점(기준점)을 바꿔볼 수 있음
+            =>죄측상단이 0% 0%
+            =>우측하단이 100% 100%
+            각 꼭지점 기준으로
+            첫값은 x축, 두번째 값은 y축으로 구분할 수 있음
+            =>주의사함 : 이벤트 안쪽으로 적으면 위치값을 상실함.
+            움직이는 것에 직접 넣어주기!
+
+
+        }
+
+        #box:hover {
+            /* transform: scale(0.3) transform: rotate(360deg);
+            *transform 한갠데 연결되는 속성값이 두개가 되는것 밑에 적은것이
+            우선순위가 높아서 위에 적은 transform이 우선순위가 밀림
+            =>따라서 transform은 하나만 적어주고 속성 2개 이상 이어서 적어야됨 */
+
+            transform: rotateZ(360deg);
+            
+
+            
+
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="box"></div>
+    
+</body>
+</html>

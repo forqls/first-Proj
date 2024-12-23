@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 예제풀이</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: white; display: block;}
+
+
+        #wrap {
+            width: 100%;
+        }
+
+        header {
+            width: 100%;
+            height: 80px;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+
+        #in_header {
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            font: 900 22px/80px '';
+            text-align: center;
+        }
+
+        #logo {
+            width: 150px;
+            height: 100%;
+            float: left;
+        }
+
+        #menu_wrap {
+            width: 800px;
+            height: 100%;
+            font-size: 16px;
+            float: right;
+        }
+
+        #menu_wrap>li {
+            width: 20%;
+            height: 100%;
+            float: left;
+        }
+
+        /* header end */
+
+        #section_1 {
+            width: 100%;
+            height: 900px;
+            background-color: aliceblue;
+            float: left;
+            position: relative;
+        }
+
+        #section_1>video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #title_wrap {
+            width: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -258px;
+            margin-top: -68px;
+            padding: 5px 20px 10px 20px;
+            text-align: center;
+        }
+
+        #title_wrap>h1 {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+
+        /* section_1 end */
+
+        #section_2 {
+            width: 100%;
+            background-color: antiquewhite;
+            float: left;
+            padding: 100px 0;
+        }
+
+        #container {
+            width: 1200px;
+            height: 400px;
+            background-color: black;
+            margin: 0 auto;
+        }
+
+        .con {
+            width: 380px;
+            height: 100%;
+            background-color: aqua;
+            float: left;
+            margin-right: 30px;
+        }
+
+        .con:last-child {
+            margin-right: 0;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div id="in_header">
+                <div id="logo"><a href="#">logo</a></div>
+                <ul id="menu_wrap">
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">menu</a></li>
+                </ul>
+            </div>
+        </header>
+        <!-- header end -->
+
+        <section id="section_1">
+            <video src="video/vid1.mp4" autoplay muted loop></video>
+            <div id="title_wrap">
+                <h1>HTML Video Tag</h1>
+                <p>웹퍼블리싱2 멀티미디어요소 비디오태그에 대하여 알아봅시다.</p>
+            </div>
+        </section>
+        <!-- section_1 end -->
+
+        <section id="section_2">
+            <div id="container">
+                <div class="con"></div>
+                <div class="con"></div>
+                <div class="con"></div>
+            </div>
+        </section>
+        <!-- section_2 -->
+    </div>
+</body>
+</html>

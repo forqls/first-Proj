@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트랜지션</title>
+    <style>
+
+        *{margin: 0; padding: 0;}
+
+        /* *transition 
+        =>지정한 속성에 부드러운 변화나 움직임을 주고 싶을때 사용
+        (단순한 움직임,변화) */
+
+        #out_box {
+            width: 300px;
+            height: 300px;
+            border: 10px solid black;
+        }
+
+        #in_box {
+            width: 100%;
+            height: 100%;
+            background-color: lavender;
+
+            transition-duration: 1s;
+            /* =>이벤트 발생 지속시간   */
+
+            /* transition-delay: 1s; */
+            /* =>지연시간 추가 */
+
+            /* transition-property: width; */
+            /* =>property값이 없으면 전체 변경되는 속성에 transition값이 
+            적용. property값이 있으면 property에서 지정한 속성에만
+            transition값이 적용
+            ex)transition-property: width면 넓이만 부드럽게 커지고 
+            높이는 툭 바뀜 */
+
+            transition-timing-function: cubic-bezier(1,-0.03, 0.22, 1);
+            /* =>가속도 형태를 의미
+            일정하게 같은 속도로 변경이 된다던지 가속된 형태를 보여줌 */
+            /* linear일정한값으로 움직임 */
+            /* 검사창->보라색 버튼 클릭->조정->복사 후 붙여넣기 */
+        
+        }
+
+        #in_box:hover {
+            width: 200%;
+            height: 200%;
+
+            /* transition-duration: 1s; */
+            /* hover이벤트 안에도 넣어줄 수 있음. 마우스 올렸을떄만
+            트랜지션 적용(hover이벤트 자체가 마우스를 올렸을때 행위) */
+            /* transition-delay: 1s; */
+
+            
+        }
+
+        #out_box:hover>#in_box {
+            margin-left: 300px;
+        }
+        /* *이벤트 작업시 기억하기
+        1. 마우스 이벤트가 적용되는 영역
+        2. 이벤트 발생시 효과가 적용되는 범위 */
+
+
+        
+
+
+    </style>
+</head>
+<body>
+
+    <div id="out_box">
+        <div id="in_box"></div>
+    </div>
+    
+</body>
+</html>

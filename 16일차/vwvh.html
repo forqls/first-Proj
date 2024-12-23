@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vw, vh</title>
+
+    <style>
+
+        /* *css단위 
+
+        1.px,%
+        =>css에서는 지정한 단위에 따라 브라우저에 의해 픽셀값
+        으로 변환된다
+        =>px의 경우 브라우저에서 절대값으로 인식하여 1px은 항상
+        1px으로 나타낸다
+        =>%는 고정값이 아닌 상대적인 값이다
+        =>유동적으로 변하는 값이기 때문에 반응형 웹디자인에서 
+        거의 px단위가 아닌 %단위를 사용한다. */
+
+        /* 2.vh,vh
+        (1)vh
+        =>viewport height의 약자이며, 절대값을 가지지않는
+        가변단위이다.
+        =>height와 관련된 단위이며 화면의 높이에 영향을 받는다.
+        =>높이값을 퍼센트로 표현할 수 없을때 사용할 수 있음
+        (화면을 각 기기별 화면에 가득채울때만 사용, 반응형에 사용하지 않음)
+        =>브라우저 가로 크기를 줄여도 비율대로 줄진 않지만 세로로 줄이게 
+        되면 브라우저 기준에 맞춰서 비율대로 줄어듬 */
+
+        /* (2)vw
+        =>viewport width의 약자이며, 절대값을 가지지않는 가변단위
+        =>width와 관련된 단위이며 화면 너비에 영향을 받는다.
+        =>모니터 해상도 마다 표현되는게 다르며 
+        브라우저 크기가 줄더라도 퍼센트 처럼 비율대로 줄어듬
+        
+        *vw 계산공식
+        =>변경할값 / 최상위값(root값 1920) * 100 */
+
+
+
+        *{margin: 0; padding: 0;}
+
+        #box {
+            width: 100%;
+            height: 100vh;
+            background-color: thistle;
+            margin: 0 auto;
+
+            display: none;
+        }
+
+        #container {
+            width: 62.5vw; /* 1200px */
+            height: 26.041vw;/* 500px */
+            background-color: thistle;
+            margin: 5.208vw auto;/* 100px */
+        }
+
+        .con {
+            width: 19.791vw;/* 380px *//* 31.666% */
+            height: 100%;
+            background-color: lavender;
+            float: left;
+            margin-right: 1.562vw;/* 30px *//* 2.5% */
+            font-size: 4.166vw;/* 80px */
+            text-align: center;
+            line-height: 26.041vw;/* 500px */
+        }
+
+       
+
+        .con:last-child {
+            margin-right: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div id="box"></div>
+
+    <div id="container">
+        <div class="con">첫번째</div>
+        <div class="con">두번째</div>
+        <div class="con">세번째</div>
+    </div>
+
+
+    
+</body>
+</html>

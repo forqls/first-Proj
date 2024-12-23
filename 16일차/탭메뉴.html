@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭메뉴</title>
+
+    <style>
+
+        *{margin: 0; padding: 0;}
+        
+        input {
+            display: none;
+        }
+
+        #wrap {
+            width: 500px;
+            height: 600px;
+            border: 10px solid black;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #btn-wrap {
+            width: 100%;
+            height: 100px;
+            background-color: blanchedalmond;
+        }
+
+        label {
+            width: 25%;
+            height: 100%;
+            float: left;
+            display: block;
+            font: 40px/100px '';
+        }
+
+        .con {
+            width: 100%;
+            height: 500px;
+            font: 100px/500px '';
+            display: none;
+        }
+
+        #con-1 {
+            background-color: crimson;
+        }
+
+        #con-2 {
+            background-color: orange;
+        }
+
+        #con-3 {
+            background-color:yellow;
+        }
+
+        #con-4 {
+            background-color: green;
+        }
+
+        #tab-1:checked~#con-1 {
+            display: block;
+        }
+
+        #tab-2:checked~#con-2 {
+            display: block;
+        }
+
+        #tab-3:checked~#con-3 {
+            display: block;
+        }
+
+        #tab-4:checked~#con-4 {
+            display: block;
+        }
+
+        /* 형제관계선택자이기 떄문에 tab-1의 현제관계는 btn-wrap임 */
+        #tab-1:checked~#btn-wrap>#btn-1 {
+            background-color: crimson;
+        }
+
+        #tab-2:checked~#btn-wrap>#btn-2 {
+            background-color: orange;
+        }
+
+        #tab-3:checked~#btn-wrap>#btn-3 {
+            background-color: yellow;
+        }
+
+        #tab-4:checked~#btn-wrap>#btn-4 {
+            background-color: green;
+        }
+
+
+
+        
+
+
+
+    </style>
+</head>
+<body>
+    
+    <div id="wrap">
+
+            <input type="radio" id="tab-1" name="tab" checked/>
+            <input type="radio" id="tab-2" name="tab"/>
+            <input type="radio" id="tab-3" name="tab"/>
+            <input type="radio" id="tab-4" name="tab"/>
+
+            <div id="btn-wrap">
+                <label for="tab-1" id="btn-1">1</label>
+                <label for="tab-2" id="btn-2">2</label>
+                <label for="tab-3" id="btn-3">3</label>
+                <label for="tab-4" id="btn-4">4</label>
+            </div>
+
+            <div id="con_wrap">
+            <div class="con" id="con-1">첫번째</div>
+            <div class="con" id="con-2">두번째</div>
+            <div class="con" id="con-3">세번째</div>
+            <div class="con" id="con-4">네번째</div>
+            </div>
+            
+    </div>
+
+</body>
+</html>
